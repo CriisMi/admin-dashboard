@@ -12,6 +12,8 @@
     grid-template-rows: 1fr 5fr;
 }
 
+/* Header section */
+
 .header {
     padding: 10px 50px 15px 40px;
     display: grid;
@@ -23,14 +25,44 @@
     box-shadow: 0 5px 5px #bebebe;
 }
 
+.user-notification>div:nth-child(1) {
+    height: 20px;
+    width: 20px;
+    background-color: black;
+}
+
+.user-notification>div:nth-child(2) {
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    border-radius: 20px;
+    margin: 0 10px;
+}
+
 .user-notification {
     justify-self: right;
     margin-right: 10px;
     font-weight: bolder;
+    display: flex;
+    align-items: center;
 }
 
 .user-info {
     font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.user>div:nth-child(1) {
+    font-size: small;
+}
+
+.user-info>div:nth-child(1) {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    background-color: black;
+    margin-right: 10px;
 }
 
 .user-name {
@@ -49,26 +81,68 @@ button {
     margin-left: 15px;
 }
 
+form input[type='search'] {
+    border-style: none;
+    background-color: #d8d8d8;
+    border-radius: 10px;
+    height: 25px;
+    width: calc(100% - 40px);
+}
+
+form>button {
+    width: 20px;
+    margin: 0 15px 0 0;
+    background-color: white;
+    color:#686868;
+}
+
+/* Left sidebar */
+
 .sidebar {
     background-color: rgb(73, 73, 180);
     color: white;
-    padding-left: 25px;
+    padding: 20px;
+    font-size: large;
+    font-weight: bold;
     grid-row: 1 / 3;
     grid-column: 1 / 2;
-
-    display: grid;
-    grid-template-rows: auto auto 1fr;
-    gap: 40px;
     
 }
 
-.logo > div,
-.navigation > div,
-.branding > div {
-    font-size: large;
-    font-weight: bold;
-    margin-top: 15px;
+.first>div:nth-child(2) {
+    font-size: larger;
 }
+
+.first,
+.second,
+.third {
+    margin-bottom: 50px;;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-auto-rows: min-content;
+    align-items: center;
+    gap: 15px;
+}
+
+.second,
+.third {
+    margin-left: 10px;
+}
+
+.nav-el {
+    margin-right: 10px;
+    width:20px;
+    height: 20px;
+    background-color: black;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(15, 11, 11);
+}
+
+/* Main part */
 
 .main {
     background-color: rgb(235, 235, 235);
@@ -77,6 +151,8 @@ button {
     grid-template-columns: 3fr 1fr;
     gap: 15px;
 }
+
+/* Project area */
 
 .project-group {
     margin-top: 10px;
@@ -90,7 +166,11 @@ button {
     padding: 30px 20px;
     display: grid;
     grid-template-rows: auto 2fr 1fr;
+    background-image: linear-gradient(to right, blue 0 7px, white 0 100%);
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px #d8d8d8;
 }
+
 
 .card > p:nth-child(1) {
     font-weight: bold;
@@ -115,9 +195,10 @@ button {
     background-color: black;
 }
 
+/* Right sidebar */
+
 .announcements-group,
-.trending-group, 
-.card {
+.trending-group,  {
     background-color: white;
     border-radius: 10px;
     box-shadow: 3px 3px 5px #d8d8d8;
