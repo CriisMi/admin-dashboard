@@ -198,7 +198,7 @@ form>button {
 /* Right sidebar */
 
 .announcements-group,
-.trending-group,  {
+.trending-group  {
     background-color: white;
     border-radius: 10px;
     box-shadow: 3px 3px 5px #d8d8d8;
